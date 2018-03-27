@@ -6,12 +6,14 @@ namespace Animation
 {
     public partial class AnimationPage : ContentPage
     {
+        bool isExpanded = true;
+        Rectangle expandedRect; // bounds for expanded image view
+        Rectangle detailsRect;  // bounds for details image view
+
         public AnimationPage()
         {
             InitializeComponent();
         }
-
-        bool isExpanded = true;
 
         void Handle_Tapped(object sender, System.EventArgs e)
         {
@@ -22,9 +24,6 @@ namespace Animation
 
             isExpanded = !isExpanded;
         }
-
-        Rectangle expandedRect;
-        Rectangle detailsRect;
 
         private void AnimateIn()
         {
@@ -41,7 +40,6 @@ namespace Animation
             Title.TranslateTo(-Title.Width, 0, 1200, Easing.SpringOut);
             ExpandBar.FadeTo(1, 250, Easing.SinInOut);
         }
-
 
         protected override void OnSizeAllocated(double width, double height)
         {

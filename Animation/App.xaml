@@ -6,6 +6,7 @@
 
             <Color x:Key="LightText">#d3d3d3</Color>
             <Color x:Key="DarkBackground">#181818</Color>
+            <Color x:Key="HeaderText">White</Color>
             <Color x:Key="HeaderBackground">#F44336</Color>
             <Color x:Key="SubHeaderBackground">#d3d3d3</Color>
             <Color x:Key="SubHeaderText">Gray</Color>
